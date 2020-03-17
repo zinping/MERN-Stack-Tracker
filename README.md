@@ -1,68 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MERN Full Stack Tracker
 
-## Available Scripts
+Mongo Express React Node (MERN) full-stack app, integrates a React frontend with Node.js backend.
 
-In the project directory, you can run:
+*** Note: to open web links in a new window use: _ctrl+click on link_**
 
-### `npm start`
+## Table of contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## General info
 
-### `npm test`
+* requires mongodb to be running (or use Mongoose and heroku mLab to access).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `npm run build`
+![Backend screenshot](./img/nodedb.png)
+![Backend screenshot](./img/postman.png)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Backend
+* [MongoDB Community Server v4.0.9](https://www.mongodb.com/download-center/community)
+* [Mongoose v5.9.5](https://mongoosejs.com/) object modelling for node.js
+* [npm mongodb v3.5.4](https://www.npmjs.com/package/mongodb) official MongoDB driver for Node.js
+* [Express.js middleware v4.17.1](https://expressjs.com/)
+* [Node.js v12.4.0](https://nodejs.org/es/)
+* [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart afdter code changes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend
+* [React framework v16.13.0](https://reactjs.org/)
 
-### `npm run eject`
+## Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Backend
+* Change to `/backend` directory
+* Install dependencies using `npm i`
+* Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
+* Register with [MongoDB Atlas](www.mongodb.com), create a database cluster and add cluster connection string to .env file
+* Run `nodemon server` for a dev server.
+* Navigate to `http://localhost:5000/`. The server will automatically reload if you change any of the source files
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Frontend
+* todo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Code Examples
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* Extract from `server.js` - connects to database using mongoose
 
-## Learn More
+```javascript
+const uri = process.env.ATLAS_URI;
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+mongoose
+  .connect(uri, options)
+  .catch(error => console.log(error));
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const connection = mongoose.connection;
+connection.once('open', () => {
+console.log("MongoDB database connection established successfully");
+});
+mongoose.connection.on('error', err => {
+  logError('mongoose connection error', err);
+});
+```
 
-### Code Splitting
+## Features
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* todo
 
-### Analyzing the Bundle Size
+## Status & To-Do List
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+* Status: backend database connects OK. No frontend as yet
+* To-Do: Complete backend then frontend for a working full stack
 
-### Making a Progressive Web App
+## Inspiration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+* [The Best React JS by Beau Carnes: Learn the MERN Stack Full Tutorial MongoDB, Express, React, Node js](https://www.youtube.com/watch?v=FBeete8azkY)
 
-### Advanced Configuration
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
