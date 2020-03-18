@@ -11,11 +11,16 @@ const Exercise = props => (
     <td>{props.exercise.date.substring(0, 10)}</td>
     <td>
       <Link to={"/edit/" + props.exercise._id}>
-        <button type="button">
+        <button
+          type="button"
+          className="btn btn-primary btn-sm">
           Edit
         </button>
       </Link>
-      <button onClick={() => { props.deleteExercise(props.exercise._id)}}>
+      {" "}
+      <button
+        onClick={() => { props.deleteExercise(props.exercise._id)}}
+        className="btn btn-danger btn-sm">
         Delete
       </button>
     </td>
@@ -45,8 +50,7 @@ export default class ExercisesList extends Component {
   exerciseList() {
     return this.state.exercises.map(currentexercise => {
       return <Exercise exercise={currentexercise} deleteExercise={this.deleteExercise} key={currentexercise._id} />
-    }
-    )
+    })
   }
 
   // use axios delete and filter array so database elements not matching the chosen id are kept
@@ -58,16 +62,16 @@ export default class ExercisesList extends Component {
     })
   }
 
-
+  // show a table with 5 columns
   render() {
     return (
       <div>
-        <h3>Exercise Log</h3>
+        <h3>List of users and exercises</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th>Username</th>
-              <th>Description</th>
+              <th>User</th>
+              <th>Exercise</th>
               <th>Duration</th>
               <th>Date</th>
               <th>Action</th>

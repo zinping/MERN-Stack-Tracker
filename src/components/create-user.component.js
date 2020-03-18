@@ -40,11 +40,12 @@ export default class CreateUser extends Component {
   render() {
     return (
       <div>
-        <h3>Create New User</h3>
+        <h3>Add A User</h3>
         <form onSubmit={this.onSubmit}>
           <div className='form-group'>
             <label>UserName:</label>
-            <input type="text"
+            <input 
+              type="text"
               required
               className="form-control"
               value={this.state.username}
@@ -57,6 +58,5 @@ export default class CreateUser extends Component {
         </form>
       </div>
     )
-
   }
 }
