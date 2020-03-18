@@ -36,6 +36,9 @@ Mongo Express React Node (MERN) full-stack app, integrates a React frontend with
 
 ### Frontend
 * [React framework v16.13.0](https://reactjs.org/)
+* [Bootstrap v4.4.1](https://getbootstrap.com/) component library
+* [React datepicker v2.14.0](https://www.npmjs.com/package/react-datepicker) date-picker
+* [Axios](https://www.npmjs.com/package/axios) promise-based http client
 
 ## Setup
 
@@ -43,12 +46,12 @@ Mongo Express React Node (MERN) full-stack app, integrates a React frontend with
 * Change to `/backend` directory
 * Install dependencies using `npm i`
 * Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
-* Register with [MongoDB Atlas](www.mongodb.com), create a database cluster and add cluster connection string to .env file
-* Run `nodemon server` for a dev server.
+* Register with [MongoDB Atlas](www.mongodb.com), create & configure a database cluster and add cluster connection string to .env file
+* Run `nodemon server` for a dev server
 * Navigate to `http://localhost:5000/`. The server will automatically reload if you change any of the source files
 
 ### Frontend
-* todo
+* From top-level directory `mern-stack-tracker` run `npm start`. Frontend will open at `http://localhost:3000/`
 
 ## Code Examples
 
@@ -81,7 +84,7 @@ mongoose.connection.on('error', err => {
 
 ## Status & To-Do List
 
-* Status: backend database connects OK. No frontend as yet
+* Status: connects to backend database. No frontend as yet
 * To-Do: Complete backend then frontend for a working full stack
 
 ## Inspiration
