@@ -1,61 +1,68 @@
-# MERN Full Stack Tracker
+# :zap: MERN Full Stack Tracker
 
 * Mongo Express React Node (MERN) full-stack app, integrates React frontend with Node.js backend. Tutorial code (see 'Inspiration' below but with customisations - particularly the mongoose connection script is more detailed and react frontend table has proper Bootstrap buttons to avoid error messages with edit & delete links.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: MERN Full Stack Tracker](#zap-mern-full-stack-tracker)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+    * [:books: Backend](#books-backend)
+    * [:books: Frontend](#books-frontend)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Backend Technologies](#signal_strength-backend-technologies)
+  * [:signal_strength: Frontend Technologies](#signal_strength-frontend-technologies)
+  * [:floppy_disk: Setup - Backend](#floppy_disk-setup---backend)
+    * [:floppy_disk: Setup - Frontend](#floppy_disk-setup---frontend)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Backend Features](#cool-backend-features)
+    * [:cool: Frontend Featurres](#cool-frontend-featurres)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
-### Backend
+### :books: Backend
+
 * MongoDB Atlas used as the backend database - requires mongodb to be running (or use Mongoose and heroku mLab to access)
 * Postman used to test the backend, although the tutorial uses [Insomnia, a similar REST API](https://insomnia.rest/)
 * Note: I used 'my ip address' as the whitelist network access in MongoDB.Atlas but this required daily updating when my ip address changed - otherwise with a non-matching ip address the backend simply did not work. Better to use the localhost address to avoid this problem but may be less secure
 
-### Frontend
-* React frontend includes a very simple Bootstrap navbar with just 3 links: home (the complete list of users/exercises), Add Exercise & Add User 
+### :books: Frontend
+
+* React frontend includes a very simple Bootstrap navbar with just 3 links: home (the complete list of users/exercises), Add Exercise & Add User
 * Main content is a React table with 5 columns - see screenshots for details
 
-## Screenshots
+## :camera: Screenshots
 
-### Backend
 ![Backend screenshot](./img/mongodb.png)
 ![Backend screenshot](./img/postman.png)
 
-### Frontend
 ![Frontend screenshot](./img/list.png)
 ![Frontend screenshot](./img/add-user.png)
 ![Frontend screenshot](./img/add-exercise.png)
 
-## Technologies
+## :signal_strength: Backend Technologies
 
-### Backend
-* [MongoDB Community Server v4.0.9](https://www.mongodb.com/download-center/community)
-* [Mongoose v5.9.5](https://mongoosejs.com/) object modelling for Node.js
-* [npm mongodb v3.5.4](https://www.npmjs.com/package/mongodb) official MongoDB driver for Node.js
-* [Express.js middleware v4.17.1](https://expressjs.com/)
-* [Node.js v12.4.0](https://nodejs.org/es/)
+* [MongoDB Community Server v4](https://www.mongodb.com/download-center/community)
+* [Mongoose v5](https://mongoosejs.com/) object modelling for Node.js
+* [npm mongodb v3](https://www.npmjs.com/package/mongodb) official MongoDB driver for Node.js
+* [Express.js middleware v4](https://expressjs.com/)
+* [Node.js v12](https://nodejs.org/es/)
 * [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart afdter code changes
 
-### Frontend
-* [React framework v16.13.0](https://reactjs.org/)
-* [Bootstrap v4.4.1](https://getbootstrap.com/) component library
-* [React datepicker v2.14.0](https://www.npmjs.com/package/react-datepicker)
+## :signal_strength: Frontend Technologies
+
+* [React framework v16](https://reactjs.org/)
+* [Bootstrap v4](https://getbootstrap.com/) component library
+* [React datepicker v2](https://www.npmjs.com/package/react-datepicker)
 * [Axios](https://www.npmjs.com/package/axios) promise-based http client
 
-## Setup
+## :floppy_disk: Setup - Backend
 
-### Backend
 * Change to `/backend` directory
 * Install dependencies using `npm i`
 * Install [nodemon](https://www.npmjs.com/package/nodemon) globally if you don't already have it
@@ -63,12 +70,12 @@
 * Run `nodemon server` for a dev server
 * Navigate to `http://localhost:5000/`. The server will automatically reload if you change any of the source files
 
-### Frontend
+### :floppy_disk: Setup - Frontend
+
 * From top-level directory `mern-stack-tracker` run `npm start`. Frontend will open at `http://localhost:3000/`
 
-## Code Examples
+## :computer: Code Examples
 
-### Backend
 * Extract from `server.js` - connects to database using mongoose
 
 ```javascript
@@ -92,7 +99,6 @@ mongoose.connection.on('error', err => {
 });
 ```
 
-### Frontend
 * Extract from `exercise-list.js` - using lifecycle method `componentDidMount()` to get list of exercises from backend database using Axios http client, after component output has been redered to the DOM
 
 ```javascript
@@ -107,24 +113,24 @@ mongoose.connection.on('error', err => {
   }
 ```
 
-## Features
+## :cool: Backend Features
 
-### Backend
 * All data stored in collections in a mongoDB.Atlas database that costs nothing to use in the free tier option. Data can be edited from the mongoDB.Atlas collection or from within the React frontend
 
-### Frontend
-* Uses the [React componentDidMount() method](https://reactjs.org/docs/state-and-lifecycle.html) 
+### :cool: Frontend Featurres
 
-## Status & To-Do List
+* Uses the [React componentDidMount() method](https://reactjs.org/docs/state-and-lifecycle.html)
+
+## :clipboard: Status & To-Do List
 
 * Status: Working full-stack app
 * To-Do: Add commenting. Add functionality. Add resizing to make it more responsive
 
-## Inspiration
+## :clap: Inspiration
 
 * [The Best React JS by Beau Carnes: Learn the MERN Stack Full Tutorial MongoDB, Express, React, Node js](https://www.youtube.com/watch?v=FBeete8azkY)
 * [React documentation](https://reactjs.org/docs/getting-started.html)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) * you are welcome to [send me a message](https://andrewbateman.org/contact)
