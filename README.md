@@ -1,6 +1,7 @@
 # :zap: MERN Full Stack Tracker
 
-* Mongo Express React Node (MERN) full-stack app, integrates React frontend with Node.js backend. Tutorial code (see 'Inspiration' below but with customisations - particularly the mongoose connection script is more detailed and react frontend table has proper Bootstrap buttons to avoid error messages with edit & delete links.
+* Mongo Express React Node (MERN) full-stack app, integrates React frontend with Node.js backend.
+* Tutorial code - see [:clap: Inspiration](#clap-inspiration) below but with customisations - particularly the mongoose connection script is more detailed and react frontend table has proper Bootstrap buttons to avoid error messages with edit & delete links.
 
 *** Note: to open web links in a new window use: _ctrl+click on link_**
 
@@ -28,8 +29,11 @@
 ### :books: Backend
 
 * MongoDB Atlas used as the backend database - requires mongodb to be running (or use Mongoose and heroku mLab to access)
+* Mongoose models used to interact with the database
 * Postman used to test the backend, although the tutorial uses [Insomnia, a similar REST API](https://insomnia.rest/)
 * Note: I used 'my ip address' as the whitelist network access in MongoDB.Atlas but this required daily updating when my ip address changed - otherwise with a non-matching ip address the backend simply did not work. Better to use the localhost address to avoid this problem but may be less secure
+* Node.js routes used with controller functions
+* !Nodejs diagram(./img/diagram.png)
 
 ### :books: Frontend
 
@@ -52,14 +56,13 @@
 * [npm mongodb v3](https://www.npmjs.com/package/mongodb) official MongoDB driver for Node.js
 * [Express.js middleware v4](https://expressjs.com/)
 * [Node.js v12](https://nodejs.org/es/)
-* [Nodemon](https://www.npmjs.com/package/nodemon) npm module so backend server will automatically restart afdter code changes
 
 ## :signal_strength: Frontend Technologies
 
-* [React framework v16](https://reactjs.org/)
+* [React framework v17](https://reactjs.org/)
 * [Bootstrap v4](https://getbootstrap.com/) component library
-* [React datepicker v2](https://www.npmjs.com/package/react-datepicker)
-* [Axios](https://www.npmjs.com/package/axios) promise-based http client
+* [React datepicker v3](https://www.npmjs.com/package/react-datepicker)
+* [Axios v0.21.0](https://www.npmjs.com/package/axios) promise-based http client
 
 ## :floppy_disk: Setup - Backend
 
@@ -124,7 +127,7 @@ mongoose.connection.on('error', err => {
 ## :clipboard: Status & To-Do List
 
 * Status: Working full-stack app
-* To-Do: Add commenting. Add functionality. Add resizing to make it more responsive
+* To-Do: Nothing
 
 ## :clap: Inspiration
 
