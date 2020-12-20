@@ -33,7 +33,7 @@
 * Postman used to test the backend, although the tutorial uses [Insomnia, a similar REST API](https://insomnia.rest/)
 * Note: I used 'my ip address' as the whitelist network access in MongoDB.Atlas but this required daily updating when my ip address changed - otherwise with a non-matching ip address the backend simply did not work. Better to use the localhost address to avoid this problem but may be less secure
 * Node.js routes used with controller functions
-* !Nodejs diagram(./img/diagram.png)
+* ![Nodejs diagram](./img/diagram.png)
 
 ### :books: Frontend
 
@@ -136,4 +136,4 @@ mongoose.connection.on('error', err => {
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) * you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
