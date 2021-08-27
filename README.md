@@ -2,8 +2,12 @@
 
 * Mongo Express React Node (MERN) full-stack app, integrates React frontend with Node.js backend.
 * Tutorial code - see [:clap: Inspiration](#clap-inspiration) below but with customisations - particularly the mongoose connection script is more detailed and react frontend table has proper Bootstrap buttons to avoid error messages with edit & delete links.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/mern-stack-tracker?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/mern-stack-tracker?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/mern-stack-tracker?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/mern-stack-tracker?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -134,6 +138,10 @@ mongoose.connection.on('error', err => {
 * [The Best React JS by Beau Carnes: Learn the MERN Stack Full Tutorial MongoDB, Express, React, Node js](https://www.youtube.com/watch?v=FBeete8azkY)
 * [React documentation](https://reactjs.org/docs/getting-started.html)
 
+## :file_folder: License
+
+* N/A.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
