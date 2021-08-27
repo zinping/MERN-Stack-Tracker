@@ -28,10 +28,10 @@
 
 ### :books: Backend
 
-* MongoDB Atlas used as the backend database - requires mongodb to be running (or use Mongoose and heroku mLab to access)
+* MongoDB Atlas used as the backend database - requires mongodb to be running (or use Mongoose and Heroku mLab to access)
 * Mongoose models used to interact with the database
 * Postman used to test the backend, although the tutorial uses [Insomnia, a similar REST API](https://insomnia.rest/)
-* Note: I used 'my ip address' as the whitelist network access in MongoDB.Atlas but this required daily updating when my ip address changed - otherwise with a non-matching ip address the backend simply did not work. Better to use the localhost address to avoid this problem but may be less secure
+* Note: I used 'my ip address' as the whitelist network access in MongoDB.Atlas but this required daily updating when my ip address changed - otherwise with a non-matching ip address the backend simply did not work. Better to use the localhost address to avoid this problem but may be less secure.
 * Node.js routes used with controller functions
 * ![Nodejs diagram](./img/diagram.png)
 
@@ -62,7 +62,7 @@
 * [React framework v17](https://reactjs.org/)
 * [Bootstrap v4](https://getbootstrap.com/) component library
 * [React datepicker v3](https://www.npmjs.com/package/react-datepicker)
-* [Axios v0.21.0](https://www.npmjs.com/package/axios) promise-based http client
+* [Axios v0.21.1](https://www.npmjs.com/package/axios) promise-based http client
 
 ## :floppy_disk: Setup - Backend
 
@@ -118,7 +118,7 @@ mongoose.connection.on('error', err => {
 
 ## :cool: Backend Features
 
-* All data stored in collections in a mongoDB.Atlas database that costs nothing to use in the free tier option. Data can be edited from the mongoDB.Atlas collection or from within the React frontend
+* All data stored in collections in a mongoDB Atlas database that costs nothing to use in the free tier option. Data can be edited from the mongoDB.Atlas collection or from within the React frontend
 
 ### :cool: Frontend Featurres
 
