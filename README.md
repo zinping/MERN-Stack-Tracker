@@ -23,7 +23,7 @@
     * [:floppy_disk: Setup - Frontend](#floppy_disk-setup---frontend)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Backend Features](#cool-backend-features)
-    * [:cool: Frontend Featurres](#cool-frontend-featurres)
+    * [:cool: Frontend Features](#cool-frontend-featurres)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
   * [:envelope: Contact](#envelope-contact)
@@ -106,7 +106,7 @@ mongoose.connection.on('error', err => {
 });
 ```
 
-* Extract from `exercise-list.js` - using lifecycle method `componentDidMount()` to get list of exercises from backend database using Axios http client, after component output has been redered to the DOM
+* Extract from `exercise-list.js` - using lifecycle method `componentDidMount()` to get list of exercises from backend database using Axios http client, after component output has been rendered to the DOM
 
 ```javascript
   componentDidMount() {
@@ -124,7 +124,7 @@ mongoose.connection.on('error', err => {
 
 * All data stored in collections in a mongoDB Atlas database that costs nothing to use in the free tier option. Data can be edited from the mongoDB.Atlas collection or from within the React frontend
 
-### :cool: Frontend Featurres
+### :cool: Frontend Features
 
 * Uses the [React componentDidMount() method](https://reactjs.org/docs/state-and-lifecycle.html)
 
