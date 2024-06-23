@@ -141,7 +141,3 @@ mongoose.connection.on('error', err => {
 ## :file_folder: License
 
 * N/A.
-
-## :envelope: Contact
-
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
